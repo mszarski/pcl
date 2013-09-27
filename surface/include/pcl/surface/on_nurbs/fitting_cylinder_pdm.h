@@ -121,6 +121,10 @@ namespace pcl
       static ON_NurbsSurface
       initNurbsPCACylinder (int order, NurbsDataSurface *data);
 
+  	  /** \brief Initializing a cylindric B-Spline surface using the given axes. First axis becomes the cylinder axis */
+  	  static ON_NurbsSurface
+  	  initNurbsCylinderWithAxes (int order, NurbsDataSurface *data, Eigen::Matrix3d &axes);
+
       /** \brief Get the elements of a cylindric B-Spline surface.*/
       static std::vector<double>
       getElementVector (const ON_NurbsSurface &nurbs, int dim);
